@@ -20,9 +20,8 @@ CREATE TABLE menu_item
         item_no int
             PRIMARY KEY,
         restaurant_no int
-            REFERENCES restaurant (restaurant_id),
-        dish_no int
-            REFERENCES dish (dish_no),
+            REFERENCES restaurant (restaurant_id) ON DELETE NO ACTION,
+        dish_no int REFERENCES dish (dish_no) ON DELETE SET NULL,
         price dec(4, 2)
             CHECK ( price BETWEEN 5 AND 50 )
     );
@@ -32,7 +31,7 @@ CREATE TABLE food_order
         order_no int
             PRIMARY KEY,
         item_no int
-            REFERENCES menu_item (item_no),
+            REFERENCES menu_item (item_no) ON DELETE CASCADE,
         date date
             CHECK ( date >= '2024-01-01'),
         time time

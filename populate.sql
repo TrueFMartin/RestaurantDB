@@ -1,8 +1,7 @@
 INSERT INTO restaurant (restaurant_id, restaurant_name, type, city)
 VALUES (0, 'Tasty Thai', 'Asian', 'Dallas'),
        (3, 'Eureka Pizza', 'Pizza', 'Fayetteville'),
-       (5, 'Tasty Thai', 'Asian', 'Las Vegas')
-;
+       (5, 'Tasty Thai', 'Asian', 'Las Vegas');
 
 INSERT INTO dish (dish_no, dish_name, type)
 VALUES (13, 'Spring Rolls', 'ap'),
